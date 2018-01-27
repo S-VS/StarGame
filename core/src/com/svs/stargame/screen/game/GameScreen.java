@@ -88,16 +88,16 @@ public class GameScreen extends Base2DScreen implements ActionListener{
     public void show() {
         super.show();
 
-        fonMusic = Gdx.audio.newMusic(Gdx.files.internal("android/assets/sounds/music.mp3"));
+        fonMusic = Gdx.audio.newMusic(Gdx.files.internal("sounds/music.mp3"));
         fonMusic.setLooping(true);
         fonMusic.play();
-        this.soundExpolsion = Gdx.audio.newSound(Gdx.files.internal("android/assets/sounds/explosion.wav"));
-        this.soundBullet = Gdx.audio.newSound(Gdx.files.internal("android/assets/sounds/bullet.wav"));
-        this.soundLaser = Gdx.audio.newSound(Gdx.files.internal("android/assets/sounds/laser.wav"));
+        this.soundExpolsion = Gdx.audio.newSound(Gdx.files.internal("sounds/explosion.wav"));
+        this.soundBullet = Gdx.audio.newSound(Gdx.files.internal("sounds/bullet.wav"));
+        this.soundLaser = Gdx.audio.newSound(Gdx.files.internal("sounds/laser.wav"));
 
-        textureBackground = new Sprite2DTexture("android/assets/textures/bg.png");
+        textureBackground = new Sprite2DTexture("textures/bg.png");
         background = new Background(new TextureRegion(textureBackground));
-        atlas = new TextureAtlas("android/assets/textures/mainAtlas.tpack");
+        atlas = new TextureAtlas("textures/mainAtlas.tpack");
 
 
         this.bulletPool = new BulletPool();
@@ -125,7 +125,7 @@ public class GameScreen extends Base2DScreen implements ActionListener{
         this.messageGameOver = new MessageGameOver(atlas);
         this.buttonNewGame = new ButtonNewGame(atlas, this);
 
-        this.font = new Font("android/assets/font/font.fnt", "android/assets/font/font.png");
+        this.font = new Font("font/font.fnt", "font/font.png");
         this.font.setWorldSize(FONT_SIZE);
 
         startNewGame();
